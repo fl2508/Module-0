@@ -44,7 +44,7 @@ def test_distribute(x, y, z):
     Write a test that ensures that your operators distribute, i.e.
     :math:`z \times (x + y) = z \times x + z \times y`
     """
-    assert operators.mul(z, operators.add(x, y)) == operators.add(operators.mul(z, x), operators.mul(z, y))
+    assert_close(operators.mul(z, operators.add(x, y)), operators.add(operators.mul(z, x), operators.mul(z, y)))
 
     #assert operators.mul(a, operators.add(b, c)) == operators.add(operators.mul(a, b), operators.mul(a, c))
 
